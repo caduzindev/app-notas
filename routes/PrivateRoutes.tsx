@@ -8,7 +8,6 @@ export type StackList = {
 
 const { Navigator,Screen } = createStackNavigator<StackList>()
 
-
 const PrivateRoutes = ()=>(
     <Navigator initialRouteName="Home" screenOptions={{headerShown:false}}>
         <Screen name="Home" component={Home}/>

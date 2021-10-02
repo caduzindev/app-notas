@@ -5,8 +5,14 @@ import MaterialComminutyIcons from 'react-native-vector-icons/MaterialCommunityI
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 import styles from './styles'
+import { useNavigation } from '@react-navigation/core'
+import { StackList } from '../../routes/PublicRoutes'
+import { StackNavigationProp } from '@react-navigation/stack'
+
+type LoginScreenProps = StackNavigationProp<StackList,'Login'>
 
 const Register = ()=>{
+    const navigation = useNavigation<LoginScreenProps>()
     return (
         <SafeAreaView style={styles.container}>
             <Text h2>Cadastrar</Text>
@@ -29,6 +35,11 @@ const Register = ()=>{
                 title="Cadastrar" 
                 buttonStyle={styles.buttonStyle} 
                 containerStyle={styles.containerButtonStyle}
+            />
+            <Button 
+                title="Login"
+                type="clear"
+                onPress={()=>navigation.navigate('Login')}
             />
         </SafeAreaView>
     )

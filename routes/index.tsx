@@ -4,7 +4,7 @@ import PublicRoutes from './PublicRoutes'
 import PrivateRoutes from './PrivateRoutes'
 
 const RootRoutes = ()=>{
-    const [isLogged,setIsLogged] = useState(false)
+    const [isLogged,setIsLogged] = useState(true)
     return (
         <NavigationContainer>
             {!!isLogged ? <PrivateRoutes/> : <PublicRoutes/>}
