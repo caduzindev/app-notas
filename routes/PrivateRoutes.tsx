@@ -2,7 +2,12 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import Home from '../screens/Home'
 
-const { Navigator,Screen } = createStackNavigator()
+export type StackList = {
+    Home:undefined
+}
+
+const { Navigator,Screen } = createStackNavigator<StackList>()
+
 
 const PrivateRoutes = ()=>(
     <Navigator initialRouteName="Home" screenOptions={{headerShown:false}}>

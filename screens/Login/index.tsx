@@ -2,10 +2,16 @@ import React from 'react'
 import { View,SafeAreaView } from 'react-native'
 import { Input,Text,Button } from 'react-native-elements'
 import MaterialComminutyIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import { useNavigation } from '@react-navigation/native'
 
 import styles from './styles'
+import { StackList } from '../../routes/PublicRoutes'
+import { StackNavigationProp } from '@react-navigation/stack'
+
+type RegisterScreenProp = StackNavigationProp<StackList,'Register'>
 
 const Login = ()=>{
+    const navigation = useNavigation<RegisterScreenProp>()
     return (
         <SafeAreaView style={styles.container}>
             <Text h2>Login</Text>
@@ -24,6 +30,11 @@ const Login = ()=>{
                 title="Entrar" 
                 buttonStyle={styles.buttonStyle} 
                 containerStyle={styles.containerButtonStyle}
+            />
+            <Button
+                title="Cadastrar"
+                type="clear"
+                onPress={()=>navigation.navigate('Register')}
             />
         </SafeAreaView>
     )

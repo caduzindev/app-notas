@@ -3,7 +3,12 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "../screens/Login";
 import Register from "../screens/Register";
 
-const { Navigator,Screen } = createStackNavigator()
+export type StackList = {
+    Login:undefined
+    Register:undefined
+}
+
+const { Navigator,Screen } = createStackNavigator<StackList>()
 
 const PublicRoutes = ()=>(
     <Navigator initialRouteName="Login" screenOptions={{headerShown:false}}>
