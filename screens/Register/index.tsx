@@ -26,7 +26,7 @@ const Register = ()=>{
                 />
             </View>
             <Button 
-                title="Entrar" 
+                title="Cadastrar" 
                 buttonStyle={styles.buttonStyle} 
                 containerStyle={styles.containerButtonStyle}
             />

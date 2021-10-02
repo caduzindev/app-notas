@@ -1,8 +1,9 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import Register from './screens/Register';
+import RootRoutes from './routes';
 
 export default function App() {
   return (
-      <Register/>
+      <RootRoutes/>
   );
 }
